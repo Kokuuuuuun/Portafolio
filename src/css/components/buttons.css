@@ -37,13 +37,21 @@
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   color: var(--color-text);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+ .more{
+  border: none;
+  font-size: 12px;
+  color: var(--color-text);
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 852px;
+  transition: transform 0.3s ease;
+  padding: 20px;
 }

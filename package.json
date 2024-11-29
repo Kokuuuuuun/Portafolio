@@ -1,5 +1,24 @@
 {
+  "name": "portfolio-creativo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.4.15"
+    "vite": "^5.4.2",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17",
+    "gsap": "^3.12.5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "i18next": "^23.8.2",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "three": "^0.161.0"
   }
 }

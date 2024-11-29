@@ -2,7 +2,6 @@ export function initTheme() {
   const themeToggle = document.getElementById('themeToggle');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   
-  // Load saved theme or use system preference
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     document.body.className = savedTheme;

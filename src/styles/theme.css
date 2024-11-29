@@ -1,0 +1,88 @@
+/* Theme Variables */
+.light-theme {
+  --bg-color: #FFFFFF;
+  --bg-rgb: 255, 255, 255;
+  --text-color: #1A1A1A;
+  --accent-color: #007AFF;
+  --card-bg: #F8F9FA;
+  --border-color: #E9ECEF;
+  --input-bg: #FFFFFF;
+  --code-bg: #F8F9FA;
+  --scrollbar-thumb: #CED4DA;
+  --scrollbar-track: #F8F9FA;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --bg-rgb: 18, 18, 18;
+  --text-color: #F5F5F5;
+  --accent-color: #00AAFF;
+  --card-bg: #1E1E1E;
+  --border-color: #333333;
+  --input-bg: #2D2D2D;
+  --code-bg: #2D2D2D;
+  --scrollbar-thumb: #4A4A4A;
+  --scrollbar-track: #1E1E1E;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  z-index: 101;
+  transition: all var(--transition-speed);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.theme-toggle .sun,
+.theme-toggle .moon {
+  position: absolute;
+  transition: all var(--transition-speed);
+}
+
+.light-theme .moon,
+.dark-theme .sun {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}

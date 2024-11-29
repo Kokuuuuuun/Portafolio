@@ -1,27 +1,26 @@
-import { initGameIntro } from './modules/gameIntro.js';
-import { initAnimations } from './modules/animations.js';
-import { initTheme } from './modules/theme.js';
-import { initI18n } from './modules/i18n.js';
-import { initSections } from './modules/sections.js';
-import { initContact } from './modules/contact.js';
-import { initNavigation } from './modules/navigation.js';
+// Esperar a que se cargue el DOM
+document.addEventListener('DOMContentLoaded', () => {
+    // Mostrar el contenido principal después de la animación
+    setTimeout(() => {
+        document.querySelector('.main-content').classList.remove('hidden');
+    }, 4500);
 
-// Initialize AOS
-AOS.init({
-  duration: 1000,
-  once: true,
-  offset: 100
-});
+    // Navegación suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-// Initialize game intro
-initGameIntro();
-
-// Initialize other modules after game intro
-document.addEventListener('gameIntroComplete', () => {
-  initAnimations();
-  initTheme();
-  initI18n();
-  initNavigation();
-  initSections();
-  initContact();
+    // Manejo del formulario
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Aquí iría la lógica de envío del formulario
+        alert('Mensaje enviado con éxito!');
+        form.reset();
+    });
 });

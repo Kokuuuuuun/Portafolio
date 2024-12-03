@@ -128,6 +128,7 @@ body {
     var(--color-primary),
     var(--color-secondary)
   );
+  -webkit-background-clip: text;
   color: transparent;
   animation: gradient 8s ease infinite;
   background-size: 200% auto;
@@ -149,6 +150,7 @@ body {
   bottom: -8px;
   left: 0;
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;

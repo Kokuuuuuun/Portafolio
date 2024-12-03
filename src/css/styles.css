@@ -128,7 +128,6 @@ body {
     var(--color-primary),
     var(--color-secondary)
   );
-  -webkit-background-clip: text;
   color: transparent;
   animation: gradient 8s ease infinite;
   background-size: 200% auto;
@@ -189,7 +188,6 @@ body {
   text-align: center;
   margin-bottom: 4rem;
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
   color: transparent;
   position: relative;
   display: inline-block;

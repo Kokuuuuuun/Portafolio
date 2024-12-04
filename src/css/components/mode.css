@@ -1,0 +1,17 @@
+.darkModeToggle{
+    width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: #333 solid 2px;
+    background-color: #132b41;
+
+}
+
+.darkModeToggle i{
+    font-size: 1rem;
+    color: #fdc21c;
+}
